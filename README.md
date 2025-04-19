@@ -1,3 +1,78 @@
+# 2ndNature - A Fork of Twenty CRM
+
+2ndNature is a customized fork of [Twenty CRM](https://github.com/twentyhq/twenty), an open-source CRM platform. This fork aims to extend and enhance the original Twenty CRM with additional features and customizations.
+
+## About Twenty CRM
+
+Twenty is an open-source CRM that was built with three main principles in mind:
+
+1. **Affordability**: CRMs shouldn't be expensive, and users shouldn't be trapped in expensive solutions.
+2. **Modern UX**: Built with inspiration from modern tools like Notion, Airtable, and Linear.
+3. **Open Source**: Community-driven development with a focus on extensibility.
+
+For more information about the original Twenty CRM, please visit their [official documentation](https://twenty.com/developers).
+
+## Development Workflow
+
+### Branch Strategy
+
+- `main` - Production branch, auto-deployed to the main site
+- `master` - Development branch, auto-deployed to the test environment
+- `alpha` - Alpha branch, auto-deployed to the alpha environment
+- Feature branches should be created from `master` and merged via pull requests
+
+### Development Process
+
+1. Create a feature branch from `master`
+2. Make your changes
+3. Submit a pull request to `master`
+4. After review and approval, changes will be merged and auto-deployed to the test environment
+5. Once tested, changes can be promoted to `main` via pull request
+
+## Getting Started
+
+### Local Development Setup
+
+For detailed instructions on setting up your local development environment, please refer to our [Local Development Guide](./docs/local-development.md).
+
+### Quick Start
+
+1. Clone the repository:
+```bash
+git clone [your-repo-url]
+cd 2ndNature
+```
+
+2. Install dependencies:
+```bash
+yarn
+```
+
+3. Set up your environment variables:
+```bash
+cp ./packages/twenty-front/.env.example ./packages/twenty-front/.env
+cp ./packages/twenty-server/.env.example ./packages/twenty-server/.env
+```
+
+4. Start the development servers:
+```bash
+npx nx start
+```
+
+The application will be available at:
+- Frontend: http://localhost:3001
+- Backend: http://localhost:3000
+
+## Documentation
+
+- [Local Development Guide](./docs/local-development.md)
+- [Architecture Overview](./docs/architecture.md)
+- [Contributing Guidelines](./docs/contributing.md)
+- [Deployment Guide](./docs/deployment.md)
+
+## License
+
+This project is licensed under the same terms as the original Twenty CRM. See the [LICENSE](./LICENSE) file for details.
 
 <br>
 <p align="center">
